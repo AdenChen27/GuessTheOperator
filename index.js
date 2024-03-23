@@ -46,6 +46,8 @@ function add_new_clue(lvalue, rvalue) {
     `;
     
     clueListContainer.appendChild(clueContainer);
+    document.getElementById('input-num-l').value = '';
+    document.getElementById('input-num-r').value = '';
 }
 
 function toggle_element_hidden(id) {
@@ -104,7 +106,6 @@ function init_game() {
     answer = question_operator(question_lvalue, question_rvalue);
     // document.getElementById("question-answer").innerText = answer;
 }
-
 init_game();
 
 
