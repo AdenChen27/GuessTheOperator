@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightgrey;
+}
+
+/*nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+}*/
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.game-container {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#title {
+    width: 100%;
+    
+}
+
+#question-container {
+    width: 60%;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+#question-container div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#clue-list-container {
+    width: 30%;
+    padding: 20px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

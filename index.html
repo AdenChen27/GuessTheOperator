@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guess The Operator Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="game.html">Game</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav> -->
+    <h1 id="title">Guess The Operator Game</h1>
+    <p>Guess the Answer of the Equation</p>
+    <main>
+        <div id="game-container">
+            <div id="question-container" class="entry-container">
+                <span id="question-num-l" class="entry"></span>
+                <span id="question-operator" class="entry">?</span>
+                <span id="question-num-r" class="entry"></span>
+                <span id="question-equals" class="entry">=</span>
+                <input id="question-answer" class="entry">?</input>
+                <button onclick="check_answer()" id="check answer" class="entry">Check</button>
+            </div>
+
+            <div id="clue-list-container">
+                
+            </div>
+
+            <div id="user-input-container">
+                <div id="user-input-form">
+                    <label for="input-num-l">Left Input:</label>
+                    <input type="text" id="input-num-l" name="input-num-l">
+                    
+                    <label for="input-num-r">Right Input:</label>
+                    <input type="text" id="input-num-r" name="input-num-r">
+                    
+                    <button onclick="add_new_clue_from_input()" id="submit-input" type="submit">Submit</button>
+
+                    <span id="input-error-message" hidden="true">Error in input</span>
+                </div>
+            </div>
+
+            <div id="answer-container">
+            </div>
+            
+            <btn onclick="init_game()">Rematch</btn>
+
+        </div>
+</div>
+</main>
+    <footer>
+        <p>&copy; 2024 Guess The Operator Game. Made by Aden Chen, Hanlei Wen, Jack Hu, Ziad Elshahawy</p>
+    </footer>
+</body>
+
+<script src="index.js"></script>
+</html>
