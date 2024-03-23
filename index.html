@@ -13,49 +13,85 @@
             <li><a href="about.html">About</a></li>
         </ul>
     </nav> -->
-    <h1 id="title">Guess The Operator Game</h1>
-    <p>Guess the Answer of the Equation</p>
-    <main>
-        <div id="game-container">
-            <div id="question-container" class="entry-container">
-                <span id="question-num-l" class="entry"></span>
-                <span id="question-operator" class="entry">?</span>
-                <span id="question-num-r" class="entry"></span>
-                <span id="question-equals" class="entry">=</span>
-                <input id="question-answer" class="entry">?</input>
-                <button onclick="check_answer()" id="check answer" class="entry">Check</button>
-            </div>
-
-            <div id="clue-list-container">
-                
-            </div>
-
-            <div id="user-input-container">
-                <div id="user-input-form">
-                    <label for="input-num-l">Left Input:</label>
-                    <input type="text" id="input-num-l" name="input-num-l">
-                    
-                    <label for="input-num-r">Right Input:</label>
-                    <input type="text" id="input-num-r" name="input-num-r">
-                    
-                    <button onclick="add_new_clue_from_input();" id="submit-input" type="submit">Submit</button>
-
-                    <span id="input-error-message" hidden="true">Error in input</span>
-                </div>
-            </div>
-
-            <div id="answer-container">
-            </div>
-            
-            <btn onclick="init_game()">Rematch</btn>
-
+    <div id="page-container">
+        <h1 id="title">Guess The Operator</h1>
+        <div id="rules-box">
+            <div id="rules-title">Rules</div>
+            <ol>
+                <li>Each question is 100 points.</li>
+                <li>You have UNLIMITED CLUES for what the operator is – get a clue by entering two integers. However, we deduct 1 points for each clue you use. </li>
+                <li>You CANNOT directly enter both numbers in the prompt. </li>
+                <li>Two hints are available, costing 20 and 40 points respectively.</li>
+                <li>You can use clues and hints even at 0 points (you will go negative).</li>
+                <li>You only get ONE CHANCE at the answer! If you enter a incorrect answer, the game restart from the first level. </li>
+                <li>All the inputs should be INTEGERS</li>
+                <li>Good Luck!</li>
+            </ol>
         </div>
-</div>
-</main>
-    <footer>
-        <p>&copy; 2024 Guess The Operator Game. Made by Aden Chen, Hanlei Wen, Jack Hu, Ziad Elshahawy, Justin Zhang</p>
-    </footer>
+            <div id="game-container">
+                <div id="game-info">
+                    Current Level: 
+                    <span id="current-level"></span>
+
+                    <br>
+
+                    <button onclick="display_hint()" id="display-hint-button">Display Hint</button>
+                    <span id="hint-message"></span>
+
+                    <br>
+
+                    <span id="hints-used">Numbers of Hints Used:</span>
+                    <span id="num-hints-used"></span>
+
+                    <br>
+
+                    <span>Points:</span>
+                    <span id="score-record"></span>
+                </div>
+
+                <div id="question-container" class="entry-container">
+                    <span id="question-num-l" class="entry"></span>
+                    <span id="question-operator" class="entry">?</span>
+                    <span id="question-num-r" class="entry"></span>
+                    <span id="question-equals" class="entry">=</span>
+                    <input id="question-answer" class="entry"></input>
+                </div>
+
+                <button onclick="check_answer()" id="check-answer-button">Submit</button>
+
+                <span id="right-answer-message" class="answer-message" hidden="true">Correct!</span>
+                <span id="wrong-answer-message" class="answer-message" hidden="true">Incorrect!</span>
+
+                <div id="clue-list-container">
+                </div>
+                <div id="clue-notification"> Your next CLUE: </div>
+                <div id="user-input-container">
+                    <div id="user-input-form">
+                        <label for="input-num-l">Left Input:</label>
+                        <input type="text" id="input-num-l" name="input-num-l">
+                        
+                        <label for="input-num-r">Right Input:</label>
+                        <input type="text" id="input-num-r" name="input-num-r">
+                        
+                        <button onclick="add_new_clue_from_input();" id="submit-input" type="submit">Submit</button>
+
+                        <span id="input-error-message" hidden="true">Read the Rules lmao</span>
+                    </div>
+                </div>
+
+                <div id="answer-container">
+                </div>
+                
+                <!-- <button onclick="init_game()">Restart</button> -->
+
+            </div>
+        </div> 
+    </div>
+
 </body>
+<footer>
+    <p>&copy; 2024 Guess The Operator Game. Made by Aden Chen, Hanlei Wen, Jack Hu, Ziad Elshahawy, Justin Zhang</p>
+</footer>
 
 <script src="index.js"></script>
 </html>

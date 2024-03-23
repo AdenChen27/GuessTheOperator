@@ -6,7 +6,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: lightgrey;
+    background-color: #CAF0F8;
+    color: #023E8A;
+    margin-bottom: 100px;
 }
 
 /*nav {
@@ -17,6 +19,95 @@ body {
     background-color: #333;
     color: white;
 }*/
+
+#page-container {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#title {
+    margin: auto;
+    margin-top: 10px;
+    width: 60%;
+    padding: 7px;
+    align: center;
+    text-align: center;
+    color: #023E8A;
+}
+
+#rules-title {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#rules-box {
+    translate: 10px -20px;
+    float: right;
+    font-size: 12pt;
+    width: 250px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    background-color: #90E0EF;
+}
+
+#game-info {
+    width: 400px;
+}
+
+#question-container {
+    width: 320px;
+    margin-left: 410px;
+    translate: 0px -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+.entry {
+    padding: 10px;   
+    width: 60px;
+}
+
+.answer-message {
+    translate: 510px -120px;
+}
+
+#check-answer-button {
+    translate: 760px -165px;
+}
+
+#clue-list-container {
+    translate: 380px -100px;
+}
+
+#clue-notification {
+    translate: 100px -130px;
+}
+
+#input-num-l {
+    width: 60px;
+}
+
+#input-num-r {
+    width: 60px;
+}
+
+#user-input-form {
+    translate: 325px -100px;
+}
+
+#submit-input {
+    margin-left: 10px;
+    font-size: 11pt;
+    width: 100px;
+    height: 40px;
+}
 
 .nav-links {
     list-style: none;
@@ -30,25 +121,6 @@ body {
 .nav-links a {
     color: white;
     text-decoration: none;
-}
-
-.game-container {
-    width: 80%;
-    margin: 50px auto;
-    text-align: center;
-}
-
-#title {
-    width: 100%;
-    
-}
-
-#question-container {
-    width: 60%;
-    margin-right: 10px;
-    padding: 20px;
-    background-color: #ddd;
-    border-radius: 5px;
 }
 
 #question-container div {
