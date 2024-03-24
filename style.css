@@ -1,161 +1,30 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.container-fluid {
+    margin-bottom: 70px;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #CAF0F8;
-    color: #023E8A;
-    margin-bottom: 100px;
-}
-
-/*nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: white;
-}*/
-
-#page-container {
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-#title {
-    margin: auto;
-    margin-top: 10px;
-    width: 60%;
-    padding: 7px;
-    align: center;
-    text-align: center;
-    color: #023E8A;
-}
-
-#rules-title {
-    font-weight: bold;
-    font-size: 25px;
-}
-
-#rules-box {
-    translate: 10px -20px;
-    float: right;
-    font-size: 12pt;
-    width: 250px;
-    padding-top: 10px;
-    padding-left: 30px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    background-color: #90E0EF;
-}
-
-#game-info {
-    width: 400px;
-}
-
-#question-container {
-    width: 320px;
-    margin-left: 410px;
-    translate: 0px -100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: lightblue;
-    padding: 20px;
-    border-radius: 7px;
-}
-
 .entry {
-    padding: 10px;   
-    width: 60px;
+    width: 3em;
 }
 
-.answer-message {
-    translate: 510px -120px;
-}
-
-#check-answer-button {
-    translate: 760px -165px;
-}
-
-#clue-list-container {
-    translate: 380px -100px;
-}
-
-#clue-notification {
-    translate: 100px -130px;
-}
-
-#input-num-l {
-    width: 60px;
-}
-
-#input-num-r {
-    width: 60px;
-}
-
-#user-input-form {
-    translate: 325px -100px;
-}
-
-#submit-input {
-    margin-left: 10px;
-    font-size: 11pt;
-    width: 100px;
-    height: 40px;
-}
-
-.nav-links {
-    list-style: none;
-}
-
-.nav-links li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-}
-
-#question-container div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-#clue-list-container {
-    width: 30%;
-    padding: 20px;
-    background-color: #ddd;
-    border-radius: 5px;
-}
-
-
-button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
 
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    height: 2.5em;
 }
+
+label {
+    font-size: 0.75em;
+}
+
+html body {
+    font-family: Arial, sans-serif; 
+    background-color: #CAF0F8; 
+    color: #023E8A;
+}
+
+.quest/*ion-container {
+    background-color: lightblue;
+}
+
+#clue-list-container {
+    background-color: #ddd;
+}*/
+

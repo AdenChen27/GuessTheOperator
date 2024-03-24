@@ -60,26 +60,24 @@ const hints = [
 const questions = [
     {
         func: (function (x, y) {return 2 * x - y;}), 
-        hints: ["Probably I should recall my elementary school arithmetic 🤔",
-        "You do recognize that this is not a simple addition/subtraction right? It’s close.🤯"]
+        hints: ["Maybe I should recall my elementary school arithmetic 🤔",
+        "I should probably multiply 2 to the first number and see what's going on 🤯"]
     }, 
     {
         func: (function (x, y) {return num_of_digits(x) + num_of_digits(y);}), 
-        hints: ["Perhaps I should FORGET all the mathematics you learned 🤔",
-        "Probably I should check the digits of each number!🤯"]
+        hints: ["Forget all the mathematics 🤔"]
     },
     {
         func: (function (x, y) {return 2 * x * x + 3;}), 
-        hints: ["All men are created equal. Numbers, though, aren’t.🤯", 
-        "Probably I should focus on the first number and ignore the second one for now 🤯"]
+        hints: ["I should probably check the square of first number and ignore the second one 🤔"]
     },
     {
         func: (function (x, y) {return num_of_1_in_binary(x) + num_of_1_in_binary(y);}), 
-        hints: ["The binary table isn’t there for no reason!🤔”,  “Try writing the binary representation of both inputs out. It’s much more obvious than you think. Really.🤯"   ]
+        hints: ["I should potentially think about the binary form 🤔"]
     },
     {
         func: (function (x, y) {return num_of_circles(x) + num_of_circles(y);}), 
-        hints: ["FORGET all the mathematics you learned…again.🤔", "Perhaps I should consider the structure of the numbers instead of the number itself? What makes a number digit different, exactly?🤯"]
+        hints: ["I should plausibly not search up what homeomorphism means 🤔"]
     }
 ];
 
@@ -92,6 +90,7 @@ var question_operator = null;
 var question_lvalue = null;
 var question_rvalue = null;
 var answer = null;
+var score = null;
 var current_level = null;
 var clues_used_for_level = null;
 var hints_used_for_level = null;
@@ -104,12 +103,12 @@ function add_new_clue(lvalue, rvalue) {
     
     const clueContainer = document.createElement("div");
     clueContainer.innerHTML += `
-    <div class="entry-container">
-        <span class="clue-num" class="entry">${lvalue}</span>
-        <span>?</span>
-        <span class="clue-num" class="entry">${rvalue}</span>
-        <span>=</span>
-        <span class="clue-ans" class="entry">${answer}</span>
+    <div class="d-flex justify-content-center mb-3">
+        <span class="entry">${lvalue}</span>
+        <span class="entry">?</span>
+        <span class="entry">${rvalue}</span>
+        <span class="entry">=</span>
+        <span class="entry">${answer}</span>
     </div>
     `;
     
@@ -199,6 +198,7 @@ function init_level(level) {
     set_span_val("question-num-l", question_lvalue);
     set_span_val("question-num-r", question_rvalue);
     set_span_val("hint-message", "");
+    set_span_val("num-hints-used", hints_used_for_level);
     
     clues_used_for_level = 0;
     
@@ -234,6 +234,7 @@ function display_hint() {
     }
     set_span_val("hint-message", questions[current_level - 1].hints[hints_used_for_level]);
     hints_used_for_level += 1;
+    set_span_val("num-hints-used", hints_used_for_level);
     if (hints_used_for_level == 1) {
         score -= 20;
     } else if (hints_used_for_level >= 2) {
@@ -255,7 +256,7 @@ function init_game() {
 
 function next_level() {
     if (current_level == num_level) {
-        alert("You Win!");
+        alert(`You Win! Score: ${score}`);
     }
 
     current_level += 1;
