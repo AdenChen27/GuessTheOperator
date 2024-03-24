@@ -189,6 +189,7 @@ function set_span_val(span_id, value) {
 
 
 function init_level(level) {
+    set_span_val("current-level", level);
     document.getElementById("question-answer").value = "";
     document.getElementById("clue-list-container").innerHTML = "";
     question_lvalue = randint(0, 19);
@@ -248,7 +249,6 @@ function init_game() {
     score = 0;
     current_level = 1;
     
-    set_span_val("current-level", current_level);
     set_span_val("score-record", score);
     init_level(1);
 }
@@ -256,7 +256,9 @@ function init_game() {
 
 function next_level() {
     if (current_level == num_level) {
-        alert(`You Win! Score: ${score}`);
+        alert(`You Win! Score: ${score + 100}`);
+        init_game();
+        return ;
     }
 
     current_level += 1;
