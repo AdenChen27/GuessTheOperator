@@ -105,8 +105,8 @@ const questions = [
     {
         func: (function (x, y) {return x + y;}), 
         hints: [
-            "Hint: Why do you need a clue for this???",
-            "Hint: Come on man, seriously? Reeducate yourself PLS."
+            "Hint: Let's try some basic operations!",
+            "Hint: How about try the addition (+)?"
         ]
     }, 
     {
