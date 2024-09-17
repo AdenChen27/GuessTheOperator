@@ -1,6 +1,6 @@
 # GuessTheOperator
 
-Super nerdy game made during the 2024 UChicago Hackathon with 
+Super nerdy game made during the 2024 [UChicago Hackathon](https://uncommonhacks.com/) with 
 [Hanlei Wen](https://github.com/hanleiwen), 
 [Ziad Elshahawy](https://github.com/zelshahawy), 
 [Justin Zhang](https://github.com/chenjiaz2022), 
